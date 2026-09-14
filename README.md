@@ -1,12 +1,10 @@
-# IDS-ML-sol
-Machine Learning Based Network Intrusion Detection System for SecureNet Corp.
 # Machine Learning Based Network Intrusion Detection System
 
 ## Project Overview
 
-This project develops a proof-of-concept Machine Learning-based Network Intrusion Detection System (NIDS) for the fictional organization **SecureNet Corp.**
+This project develops a proof-of-concept Machine Learning-based Network Intrusion Detection System (NIDS) for the fictional organization SecureNet Corp.
 
-The system uses network traffic data from the **UNSW-NB15 dataset** and applies a Random Forest classifier to distinguish between normal and malicious network traffic.
+The system uses network traffic data from the UNSW-NB15 dataset and applies a Random Forest classifier to distinguish between normal and malicious network traffic.
 
 ## Objective
 
@@ -19,6 +17,17 @@ The project uses the `UNSW_NB15_training-set.csv` file from the UNSW-NB15 datase
 The dataset contains network traffic features representing normal and malicious activity.
 
 For this project, the available training dataset was divided into training and testing subsets. The separate official UNSW-NB15 testing file was not used.
+
+The dataset is not included in this repository because of its size. It should be obtained separately from the official UNSW-NB15 dataset source.
+
+## How to Run
+
+1. Download or obtain the `UNSW_NB15_training-set.csv` dataset.
+2. Place the CSV file in the dataset location expected by the notebook.
+3. Open `info security assign 1.ipynb` using Jupyter Notebook, JupyterLab, or VS Code.
+4. Run the notebook cells in order.
+5. The notebook performs data preprocessing, exploratory data analysis, model training, prediction, and evaluation.
+6. The generated evaluation results and visualizations are available in the `results/` folder.
 
 ## Methodology
 
@@ -82,3 +91,4 @@ The high recall indicates that the model detected most malicious network traffic
 ## Disclaimer
 
 This project is a proof-of-concept developed for academic purposes. The model is not intended to replace professional cybersecurity infrastructure or human security analysis.
+
