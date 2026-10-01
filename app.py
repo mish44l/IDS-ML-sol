@@ -290,15 +290,17 @@ div.stButton > button:focus span {
 # --------------------------------------------------
 # LOAD DATASET
 # --------------------------------------------------
-
 @st.cache_data
 def load_data():
-    df = pd.read_csv("datasets/UNSW_NB15_training-set.csv")
+    df = pd.read_csv(
+        "UNSW_NB15_training-set.csv.gz",
+        compression="gzip"
+    )
     return df
 
 @st.cache_resource
 def load_model():
-    model = joblib.load("random_forest_ids.pkl")
+    model = joblib.load("random_forest_ids_deploy.pkl")
     model_features = joblib.load("model_features.pkl")
 
     return model, model_features
